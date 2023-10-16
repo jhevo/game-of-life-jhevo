@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.6.0')
+}
+
+def tag = project.properties.getOrDefault("tag", "") as String
+test {
+    useJUnitPlatform {
+        if (!tag.isBlank()) includeTags(tag)
+    }
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+jar {
+    archiveBaseName = 'game-of-life'
+    archiveVersion = '0.1.0'
+    manifest {
+        attributes 'Main-Class': 'edu.fcc.cmis.life.GameOfLife'
+    }
+}

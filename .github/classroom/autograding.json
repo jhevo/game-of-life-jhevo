@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "ui",
+      "setup": "",
+      "run": "gradle test -P tag=ui",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "game",
+      "setup": "",
+      "run": "gradle test -P tag=game",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "basicBorder",
+      "setup": "",
+      "run": "gradle test -P tag=basicBorder",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 4
+    },
+    {
+      "name": "extremeBorder",
+      "setup": "",
+      "run": "gradle test -P tag=extremeBorder",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 4
+    }
+  ]
+}

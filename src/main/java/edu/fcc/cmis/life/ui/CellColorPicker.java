@@ -15,6 +15,14 @@ public class CellColorPicker {
      */
     public static Color colorForCell(Cell cell) {
         CellState current = cell.getState();
+        if(current == CellState.ALIVE){
+            return Color.GREEN;
+
+
+        } else{
+            return Color.DARK_GRAY;
+
+        }
         /*
         The Color class has some constants available out of the box, you can just pick them like:
         `return Color.BLACK`
@@ -25,6 +33,7 @@ public class CellColorPicker {
 
         you need to write logic based on `Cell` to determine which color you want to return.
          */
-        throw new UnsupportedOperationException("implement me");
+
+
     }
 }

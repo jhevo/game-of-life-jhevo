@@ -11,6 +11,25 @@ public class CellRule {
      * @return the next {@link CellState} for {@param current}
      */
     public static CellState next(CellState current, long neighbors) {
-        throw new UnsupportedOperationException("implement me");
+    if (current == CellState.ALIVE) {
+            if (neighbors < 2) {
+                current = CellState.DEAD;
+            } else if (neighbors == 2 ||  neighbors == 3 ) {
+                current = CellState.ALIVE;
+            } else if (neighbors > 3) {
+                current = CellState.DEAD;
+            }
+
+        } else if (current == CellState.DEAD){
+            if (neighbors == 3){
+                current = CellState.ALIVE;
+
+            } else {
+                current = CellState.DEAD;
+
+
+            }
+        }
+    return current;
     }
 }

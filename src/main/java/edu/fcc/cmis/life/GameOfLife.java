@@ -8,9 +8,9 @@ import java.awt.*;
 
 public class GameOfLife {
 
-    private static final int LENGTH = 500;
-    private static final int REFRESH = 100; // in millis
-    private static final int N = 32;
+public static final int LENGTH = 500;
+    public static final int REFRESH = 100; // in millis
+    public static final int N = 32;
 
     private static final String TITLE = "Game of Life";
 

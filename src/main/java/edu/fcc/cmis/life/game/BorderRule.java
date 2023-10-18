@@ -10,6 +10,16 @@ public class BorderRule {
      * @return
      */
     public static int bound(int myPosition, int N) {
-        throw new UnsupportedOperationException("implement me");
+        if (myPosition < 0 ) {
+            myPosition = N - 1;
+
+        } else if (myPosition >= N){
+            myPosition = 0;
+
+        } else {
+            return myPosition;
+
+        }
+    return myPosition;
     }
 }
